@@ -1,0 +1,25 @@
+.title {
+    text-align: center;
+    color: #5a5e08;
+    font-size: 70px;
+}
+
+img {
+    float: left;
+    padding-right: 100px;
+    width: 470px;
+}
+
+.main {
+    font-size: 27px;
+    text-align: left;
+    font-family: fantasy;
+    color: darkcyan;
+}
+
+.dev {
+    padding: 10px;
+    font-size: 27px;
+    color: chocolate;
+    font-family: fantasy;
+}

@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: darkgreen;
+}
+
+.header-right a {
+    padding: 0 40px;
+    font-family: "Lucida Grande";
+    margin-top: 40px;
+    float: right;
+    display: block;    
+}
+
+.header-left {
+    text-align: left;
+}
+
+header {
+    background-color: #b38b6d;    
+    height: 65px;
+    position: fixed;
+    color: blue;    
+    opacity: 0.4;
+    width: 100%;
+    top: 0;
+    z-index: 10;    
+}
+
+.header-logo {
+    height: 30px;
+    width: auto;
+    font-family: "Lucida Calligraphy";
+    padding-bottom: 30px;
+    padding-left: 30px;
+    font-size: 32px;
+    color: blue;
+    float: left;
+    text-align: right;    
+}
+
+.container {    
+    height: 90px;
+    max-width: 1670px;
+    width: 100%;    
+    padding: 0 15px;
+    margin: 0 auto;    
+    font-family: "Inconsolata";
+}
+
+.top-wrapper {
+    height: 750px;
+    background-image: url(http://wallpaper.pickywallpapers.com/1680x1050/imac-on-a-table.jpg);
+    background-size: cover;        
+    padding: 180px 0 100px 0;    
+}
+
+.top-wrapper h1 {
+    text-align: center;
+    margin: 10px 10px;
+    font-size: 70px;
+    opacity: 0.7;
+    letter-spacing: 12px;
+    color: greenyellow;
+}
+
+.top-wrapper p {
+    text-align: center;
+    opacity: 0.7;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: limegreen;
+}
+

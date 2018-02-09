@@ -1,0 +1,145 @@
+
+<html>
+    
+    <head>
+        <title>Scientific Calculator</title>
+        <link href = "stylesheet.css" rel = "Stylesheet"/>        
+    </head>
+    
+    <body>
+        <h1><u><i>Rudimentary Scientific Calculator</i></u></h1>
+        <center>
+            <p>
+                Enter First Number(For Single Input, Use Only this):
+                <input  id = "num1" placeholder = "First Number"/>
+            </p>        
+            
+            <p>
+                Enter Second Number:
+                <input  id = "num2" placeholder = "Second Number"/>
+            </p>
+            
+            
+            
+            <div class = "operators">
+                <input type = "submit" value = "+" onClick = "sum()"/>
+                <input type = "submit" value = "-" onClick = "diff()"/>
+                <input type = "submit" value = "x" onClick = "product()"/>
+                <input type = "submit" value = "/" onClick = "quotient()"/>
+                <br/>
+                <input type = "submit" value = "sin" onClick = "sine()"/>
+                <input type = "submit" value = "cos" onClick = "cosine()"/>
+                <input type = "submit" value = "tan" onClick = "tangent()"/>
+                <br/>
+                <input type = "submit" value = "cosec" onClick = "cosecant()"/>
+                <input type = "submit" value = "sec" onClick = "secant()"/>
+                <input type = "submit" value = "cot" onClick = "cotangent()"/>
+                <br/>
+                <input type = "submit" value = "square" onClick = "square()"/>
+                <input type = "submit" value = "cube" onClick = "cube()"/>
+                <input type = "submit" value = "inv" onClick = "inverse()"/>
+                <br/>
+                <input type = "submit" value = "root" onClick = "root()"/>
+                <input type = "submit" value = "cube-root" onClick = "cubeRoot()"/>
+                <br/>                
+            </div>                  
+            
+            Result: <output type = "text" id = "out"/>
+        </center>
+        
+        <script>
+            var inputString = "";
+            function update(value) {
+                inputString += value;
+                document.getElementById("num1").value = inputString; 
+            }
+            
+                        
+            //sum function 2.0
+            function sum() {                
+                var x = parseInt(document.getElementById("num1").value);    
+                document.getElementById("num1").value = "";
+                var y = parseInt(document.getElementById("num1").value);
+                //while(NaN(document.getElementById("num1").value))
+                y = parseInt(document.getElementById("num1").value);                
+                out.innerHTML = (x+y);
+            }
+            //diff function 2.0
+            function diff() {                
+                var x = parseInt(document.getElementById("num1").value);                
+                var y = parseInt(document.getElementById("num2").value);
+                out.innerHTML = (x-y);
+            }
+            //multiply function 2.0
+            function product() {                
+                var x = parseInt(document.getElementById("num1").value);                
+                var y = parseInt(document.getElementById("num2").value);
+                out.innerHTML = (x*y);
+            }
+            //divide function 2.0
+            function quotient() {                
+                var x = parseInt(document.getElementById("num1").value);                
+                var y = parseInt(document.getElementById("num2").value);
+                out.innerHTML = (x/y);
+            }
+            //sin theta
+            function sine() {                
+                var x = parseInt(document.getElementById("num1").value);                
+                out.innerHTML = (Math.sin(x * Math.PI/180));
+            }
+            //cos theta
+            function cosine() {                
+                var x = parseInt(document.getElementById("num1").value);                
+                out.innerHTML = (Math.cos(x * Math.PI/180));
+            }
+            //tan theta
+            function tangent() {                
+                var x = parseInt(document.getElementById("num1").value);                
+                out.innerHTML = (Math.tan(x * Math.PI/180));
+            }
+            //cosec theta
+            function cosecant() {                
+                var x = parseInt(document.getElementById("num1").value);                
+                out.innerHTML = (1/Math.sin(x * Math.PI/180));
+            }
+            //sec theta
+            function secant() {                
+                var x = parseInt(document.getElementById("num1").value);                
+                out.innerHTML = (1/Math.cos(x * Math.PI/180));
+            }
+            //cot theta
+            function cotangent() {                
+                var x = parseInt(document.getElementById("num1").value);                
+                out.innerHTML = (1/Math.tan(x * Math.PI/180));
+            }
+            //square
+            function square() {
+                var x = parseInt(document.getElementById("num1").value);                
+                out.innerHTML = (Math.pow(x, 2));
+            }
+            //cube
+            function cube() {
+                var x = parseInt(document.getElementById("num1").value);                
+                out.innerHTML = (Math.pow(x, 3));
+            }
+            //inverse
+            function inverse() {
+                var x = parseInt(document.getElementById("num1").value);                
+                out.innerHTML = (1/x);
+            }
+            //square-root
+            function root() {
+                var x = parseInt(document.getElementById("num1").value);                
+                out.innerHTML = (Math.sqrt(x));
+            }
+            //cube-root
+            function cubeRoot() {
+                var x = parseInt(document.getElementById("num1").value);                
+                out.innerHTML = (Math.pow(x, 1/3));
+            }
+            
+        </script>
+        
+    </body>
+    
+</html>

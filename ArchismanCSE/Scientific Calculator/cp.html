@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Scientific Calculator</title>
+        <link href="style.css" rel = "Stylesheet"/>
+    </head>
+
+    <body>
+        
+        <h1>Rudimentary Scientific Calculator</h1>
+
+        <center>
+            <form name="calculator">
+
+                <table> 
+                    <tr>
+                        <td colspan=3><input type= "text" name="input"><br></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="CE" onclick="input.value='';inputstring=''">
+                        <td><input type="button" value="%" onclick="update('%')">
+                        <td><input type="button" value="SQUARE" onclick="input.value=eval(str*str); str=str*str"> 	
+                    <br/>
+                    </tr>
+
+                    <tr>
+                        <td><input type=button value='sqrt' onclick="input.value=Math.sqrt(str); str=Math.sqrt(str)">
+                        <td><input type="button" value="+" onclick="update('+')">
+                        <td><input type="button" value="-" onclick="update('-')">
+                    <br/>
+                    </tr>
+
+                    <tr>
+                        <td><input type="button" value="*" onclick="update('*')">
+                        <td><input type="button" value="/" onclick="update('/')">
+                        <td><input type="button" value="=" onclick="input.value=eval(inputstring)">
+                        <br/>
+                    </tr>
+
+                    <tr>
+                        <td><input type="button" value="9" onclick="update('9')">
+                        <td><input type="button" value="8" onclick="update('8')">
+                        <td><input type="button" value="7" onclick="update('7')">
+                        <br/>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="6" onclick="update('6')">
+                        <td><input type="button" value="5" onclick="update('5')">
+                        <td><input type="button" value="4" onclick="update('4')">
+                    <br/>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="3" onclick="update('3')">
+                        <td><input type="button" value="2" onclick="update('2')">
+                        <td><input type="button" value="1" onclick="update('1')">
+                    <br/>
+                    </tr>
+
+                    <tr>
+                        <td><input type="button" value="0" onclick="update('0')">                        
+                        <td><input type="button" value="." onclick="update('.')">
+                    </td></tr>
+                </table>
+            </form>
+        </center>
+        <script>
+            var inputstring=" "
+
+            function update(value) {
+	           inputstring +=value;
+	           document.calculator.input.value=inputstring;
+            }
+        </script>
+    </body>
+
+</html>

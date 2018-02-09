@@ -1,0 +1,90 @@
+<html>
+    
+    <head>
+        <title>Basic Calculator</title>
+        <link href = "stylesheet.css" rel = "Stylesheet"/>        
+    </head>
+    
+    <body>
+        <h1><u><i>Most Basic Calculator</i></u></h1>
+        <center>
+            <p>
+                Enter First Number:
+                <input  id = "num1" placeholder = "First Number"/>
+            </p>        
+            
+            <p>
+                Enter Second Number:
+                <input  id = "num2" placeholder = "Second Number"/>
+            </p>
+            
+            <p>
+                Select Mathematical Operation:
+                <select id = "list">
+                    <option value="1">ADD</option>
+                    <option value="2">SUBTRACT</option>
+                    <option value="3">MULTIPLY</option>
+                    <option value="4">DIVIDE</option>
+                    <option value="5">REMAINDER</option>
+                </select>
+            </p>
+            
+            <input type = "submit" value = "CALCULATE" onClick = "listner()"/>
+        </center>
+        
+        <script>
+            
+            function listner() {
+                var x = document.getElementById("num1").value;
+                var y = document.getElementById("num2").value;
+                if(isNaN(x) && isNaN(y)){
+                    alert("PLease Enter Numbers. Text Not Applicable.");
+                    return;
+                }
+                num1 = parseInt(x); num2 = parseInt(y);
+                var choice = parseInt(document.getElementById("list").value);
+                switch(choice) {
+                    case 1: add(num1, num2);
+                            break;
+                    case 2: subtract(num1, num2);
+                            break;
+                    case 3: multiply(num1, num2);
+                            break;
+                    case 4: divide(num1, num2);
+                            break;
+                    case 5: modulo(num1, num2);
+                            break;
+                }
+            }
+            
+            //adds the numbers
+            function add(x, y) {
+                var s = x+y;
+                alert("Sum is: "+s);
+            }
+            //subtracts the numbers
+            function subtract(x, y) {
+                var d = x-y;
+                alert("Difference is: "+d);
+            }
+            //multiplies the numbers
+            function multiply(x, y) {
+                var p = x*y;
+                alert("Product is: "+p);
+            }
+            //divides the numbers
+            function divide(x, y) {
+                var q = x/y;
+                alert("Quotient is: "+q);
+            }
+            //gets the remainder after division
+            function modulo(x, y) {
+                var r = x%y;
+                alert("Reamainder is: "+r);
+            }
+            
+        </script>
+        
+    </body>
+    
+</html>

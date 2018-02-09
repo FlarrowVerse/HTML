@@ -1,0 +1,20 @@
+h1 {
+    text-align: center;
+    font-size: 70px;
+    padding-top: 20px;
+    color: blue;
+}
+
+body {
+    background-color: yellowgreen;  
+    background-image: url("http://agyp-css.com/wp-content/uploads/2014/08/4-JavaScript-Projects-to-Advance-Your-CSS3-Animations1.jpg");
+    background-size: cover;    
+}
+
+td {    
+    padding: 10px;
+}
+
+table {
+    border: 10px solid red;
+}

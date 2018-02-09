@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+    font-size: 70px;
+    padding-top: 20px;
+    color: blue;
+}
+
+p {
+    color: brown;
+}
+
+body {
+    background-color: yellowgreen;    
+}
+
+
+input {
+    align-content: center;
+    text-align: center;    
+    margin: 10px;    
+}
