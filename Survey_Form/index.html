@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Survey Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+        <link href="https://fonts.googleapis.com/css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="main.js"></script>
+</head>
+
+<body>
+    <h1 id="title">Survey Form</h1>
+
+    <p id="description">Let me know how I can improve my projects. Contact me to collaborate on Github.</p>
+    
+
+    <form id="survey-form" action="submit-successfull.html">
+        <div id="name">
+            <label for="name-input" class="labels left-col"><sup>*</sup> Name:</label>
+            <input required type="text" id="name-input" class="input-field right-col"  placeholder="Enter your Name">
+        </div>
+
+        <div id="email">
+            <label for="email-input" class="labels left-col"><sup>*</sup> Email:</label>
+            <input required type="email" id="email-input" min="1" max="125" class="input-field right-col" placeholder="Enter your (valid) email">
+        </div>
+
+        <div id="number">
+            <label for="number-input" class="labels left-col"><sup>*</sup> Age:</label>
+            <input required type="number" min="1" max="125" id="age-input" class="input-field right-col" placeholder="Enter your age">
+        </div>
+
+        <div class="dropdown-list" id="dropdown">
+            <label for="role-select" class="labels left-col">      What do you do?</label>
+            <select id="role-select" class="dropdown-list right-col">
+                <option disabled value>Select an option</option>
+                <option  value="student">Student</option>
+                <option value="job">Full Time Job</option>
+                <option value="learner">Full Time Learner</option>
+                <option value="preferNo">Prefer not to say</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div id="radiobutton-section">
+            <p class="labels left-col">
+                From where did you know about me?
+            </p>
+            <ul class="radio-buttons right-col">
+                <li>
+                    <label for="source-friends">
+                        <input type="radio" value="1" id="source-friends" name="source-info">Friends
+                    </label>
+                </li>
+                <li>
+                    <label for="source-social-media">
+                        <input type="radio" value="2" id="source-social-media" name="source-info">Social  Media
+                    </label>
+                </li>
+                <li>
+                    <label for="source-codepen">
+                        <input type="radio" value="3" id="source-codepen" name="source-info">Codepen
+                    </label>
+                </li>
+                <li>
+                    <label for="source-others">
+                        <input type="radio" value="4" id="source-others" name="source-info">Others
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="dropdown-list" id="dropdown-2">
+            <label for="best-select" class="labels left-col">Which of my projects did you like best?</label>
+            <select id="best-select" class="dropdown-list right-col">
+                <option disabled value>Select an option</option>
+                <option  value="basic-calculator">Basic Calculator</option>
+                <option value="scientific-calculator">Scientific Calculator</option>
+                <option value="eniac-page">ENIAC Page</option>
+                <option value="tic-tac-toe">Tic-Tac-Toe</option>
+                <option value="encryption-decryption-tool">Encryption-Decryption tool</option>
+                <option value="none">None of the above</option>
+            </select>
+        </div>
+
+        <div id="checkbox-section">
+            <p class="labels left-col">
+                What sort of projects would you like 
+                me to do in future?(Check all that apply)
+            </p>
+            <ul class="checkboxes right-col">
+                <li><label><input name="prefer" value="1" type="checkbox">Front-end Projects</label></li>
+                <li><label><input name="prefer" value="2" type="checkbox">Back-end Projects</label></li>
+                <li><label><input name="prefer" value="3" type="checkbox">Data Visualization</label></li>
+                <li><label><input name="prefer" value="4" type="checkbox">Challenges</label></li>
+                <li><label><input name="prefer" value="5" type="checkbox">Python Projects</label></li>
+                <li><label><input name="prefer" value="6" type="checkbox">C Projects</label></li>
+                <li><label><input name="prefer" value="7" type="checkbox">Videos</label></li>
+                <li><label><input name="prefer" value="8" type="checkbox">C++/Java Projects</label></li>
+                <li><label><input name="prefer" value="9" type="checkbox">Wiki</label></li>
+                <li><label><input name="prefer" value="10" type="checkbox">Forum</label></li>
+        
+            </ul>
+        </div>
+
+        <div id="comments">
+            <label for="comment-input" class="labels left-col">Any Comments or Suggestions?</label>
+            <textarea type="text" id="comment-input" class="input-field right-col" placeholder="Enter your comment here..."></textarea>
+        </div>
+
+        <div id="submit-button">
+            <button type="submit" id="submit">Submit</button>
+        </div>
+    </form>
+
+</body>
+
+</html>
